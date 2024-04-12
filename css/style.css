@@ -1,5 +1,4 @@
 /* STARTING FROM MOBILE VERSION */
-
 /* GENERAL RESET */
 
 * {
@@ -101,7 +100,6 @@
     margin: 0.89rem 0;
 }
 
-
 /*****************************************/
 /* BACKGROUND IMAGES */
 
@@ -114,7 +112,8 @@
 /* UTILITY */
 .contacts,
 .user-row-settings,
-.contact-options {
+.contact-options,
+.content-card {
     display: none;
 }
 
@@ -149,14 +148,6 @@
 
 /*****************************************/
 /* BACKGROUND COLORS */
-.b-blue {
-    background-color: blue;
-}
-
-.b-purple {
-    background-color: purple;
-}
-
 .b-green {
     background-color: #d4f9bb;
 }
@@ -169,11 +160,22 @@
     background-color: #eaeaea;
 }
 
+.b-azure {
+    background-color: #8fdafc;
+}
+
 /* TEXT COLORS */
 .c-gray {
     color: rgb(123, 123, 123);
 }
 
+.c-light-gray {
+    color: #bbbbbb;
+}
+
+.c-azure {
+    color: #8fdafc;
+}
 
 
 /*****************************************/
@@ -195,7 +197,7 @@
     }
 
     .chat {
-        width: 90%;
+        width: 92%;
         border-left: 1px solid #d6d6d6;
     }
 
@@ -211,10 +213,10 @@
     .contact-list {
         display: flex;
         flex-wrap: wrap;
-        height: calc(100vh - 5rem - 3vh);
+        height: calc(100vh - 5rem);
         justify-content: center;
         overflow-y: scroll;
-        margin-top: 3vh
+        padding-top: 2vh
     }
 
     .user-row {
@@ -228,12 +230,16 @@
         height: 5rem;
     }
 
-    .contact-options {
-        display: flex;
+    .icon-set-up-options {
         height: 100%;
         align-items: center;
         font-size: 1.5rem;
         margin-right: 1rem;
+    }
+
+    .contact-options {
+        display: flex;
+
     }
 
     .contact-options div:nth-child(2) {
@@ -276,18 +282,18 @@
     .row {
         height: 100%;
         width: 100%;
+        overflow: hidden;
     }
 
     .contacts {
-        height: 51.2rem;
-        width: 25%;
+        width: 35%;
         background-color: white;
-
+        height: 100%;
     }
 
     .chat {
         height: 100%;
-        width: 75%;
+        width: 65%;
     }
 
     .notifications,
@@ -299,28 +305,25 @@
         margin: 0;
         display: block;
         width: 100%;
-        height: 40.6rem;
+        height: 30rem;
         overflow-y: scroll;
-    }
-
-    .text-container {
-        height: calc(100% - 17.4%);
+        padding: 0;
     }
 
     /*****************************************/
     /*USER ROW SETUP*/
-
     .user-row {
         display: flex;
         width: 100%;
     }
 
     .user-row-settings {
-        display: block;
+        display: flex;
+        justify-content: flex-end;
     }
 
-    .user-row {
-        height: auto;
+    .user-row-settings div:nth-child(2) {
+        margin: 0 1rem;
     }
 
     .user-row .img-contact,
@@ -330,38 +333,57 @@
 
     .img-contact {
         text-align: left;
+        margin: 0.5rem 0 0 0;
+    }
+
+    .img-style {
+        margin-left: 1rem;
     }
 
     .contact-row {
         width: 100%;
     }
 
+    /*****************************************/
+    /*NOTIFICATIONS SETUP*/
+
     .notifications {
         display: flex;
-        justify-content: center;
         align-items: center;
-        background-color: aqua;
-        padding: 1rem 0;
+        padding: 0.5rem 0;
         width: 100%;
-    }
-
-    .search {
-        width: 100%;
-        padding: 0.5rem;
-        background-color: cadetblue;
+        height: 5rem;
     }
 
     .bell {
-        width: 20%;
-
+        display: flex;
+        width: 4rem;
+        border-radius: 50%;
+        height: 4rem;
+        background-color: white;
+        margin: 0 1rem;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
     }
 
-    .bell-text {
-        width: 80%;
+    /*****************************************/
+    /*SEARCH SETUP*/
+    .search {
+        width: 100%;
     }
 
+    .search input {
+        width: 95%;
+        padding: 0.5rem;
+        border: 1px solid rgba(128, 128, 128, 0.394);
+    }
+
+
+    /*****************************************/
+    /*CONTACT SETUP*/
     .contact-card {
-        margin: 2rem 0;
+        margin: 0.5rem 0;
     }
 
     .chat-row label {
@@ -370,13 +392,32 @@
         text-align: center;
     }
 
-    .chat-row label i {
-        font-size: 2rem;
-        opacity: 0.5;
-    }
-
     .chat-row input {
         width: 70%;
+    }
+
+    .contact-info {
+        padding-left: 1rem;
+    }
+
+    .content-card {
+        display: block;
+        margin-left: 1rem;
+        position: relative;
+        width: 100%;
+        font-weight: 500;
+    }
+
+    .time {
+        position: absolute;
+        right: 1rem;
+        top: 0;
+    }
+
+    /*****************************************/
+    /*TEXT CONTAINER*/
+    .text-container {
+        height: calc(100% - 10rem);
     }
 
 
