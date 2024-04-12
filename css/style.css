@@ -27,31 +27,37 @@
     font-size: 17px;
 }
 
+.bold {
+    font-weight: 700;
+}
+
 /*****************************************/
 /* CONTACT-ROW SETUP */
 .contact-row {
     display: flex;
+    height: 5rem;
 }
 
 .img-contact {
-    width: 6rem;
     text-align: center;
-    padding: 0.3rem;
+    margin: 0.5rem;
 }
 
 .contact-info {
-    width: calc(100% - 6rem);
+    width: 85%;
+    align-self: center;
 }
 
 /*****************************************/
 /* TEXT-CONTAINER SETUP */
+
 .text-container {
     width: 100%;
     padding: 1rem;
     display: flex;
     flex-direction: column;
+    height: calc(100vh - 10rem);
     overflow-y: scroll;
-    height: calc(100vh - 9.4rem);
 }
 
 .msg-1 {
@@ -70,8 +76,9 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    width: 7rem;
-    padding-top: 0.5rem;
+    width: 5rem;
+    padding: 1rem 0.2rem 0.2rem 0;
+    justify-content: space-between;
 
 }
 
@@ -83,18 +90,15 @@
 }
 
 .chat-row {
-    height: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 0 1rem;
-    background-color: rgb(239, 232, 219);
+    background-color: #f3eeeb;
 }
 
 .chat-row input {
     width: 100%;
     height: 80%;
     padding: 1rem;
+    margin: 0.89rem 0;
 }
 
 
@@ -108,21 +112,10 @@
 
 /*****************************************/
 /* UTILITY */
-.border {
-    border: 1px solid black;
-}
-
 .contacts,
-.user-row-settings {
+.user-row-settings,
+.contact-options {
     display: none;
-}
-
-.b-blue {
-    background-color: blue;
-}
-
-.b-purple {
-    background-color: purple;
 }
 
 .msg-1 p,
@@ -134,13 +127,53 @@
     text-align: center;
 }
 
+.margin-top {
+    margin-top: 0.2rem;
+}
+
+.rounded {
+    border-radius: 0.5rem;
+}
+
+.no-border {
+    border: none;
+}
+
 /*****************************************/
 /* IMAGE SETUP */
 
 .img-style {
-    width: 80%;
+    width: 4rem;
     border-radius: 50%;
 }
+
+/*****************************************/
+/* BACKGROUND COLORS */
+.b-blue {
+    background-color: blue;
+}
+
+.b-purple {
+    background-color: purple;
+}
+
+.b-green {
+    background-color: #d4f9bb;
+}
+
+.b-white {
+    background-color: #fff;
+}
+
+.b-light-grey {
+    background-color: #eaeaea;
+}
+
+/* TEXT COLORS */
+.c-gray {
+    color: rgb(123, 123, 123);
+}
+
 
 
 /*****************************************/
@@ -148,10 +181,6 @@
 @media screen and (min-width: 768px) {
     .row {
         display: flex;
-    }
-
-    .user-row {
-        height: 0;
     }
 
     .contacts {
@@ -167,6 +196,7 @@
 
     .chat {
         width: 90%;
+        border-left: 1px solid #d6d6d6;
     }
 
     .msg-1,
@@ -181,10 +211,45 @@
     .contact-list {
         display: flex;
         flex-wrap: wrap;
-        align-self: flex-start;
-        margin-top: -6rem;
+        height: calc(100vh - 5rem - 3vh);
+        justify-content: center;
+        overflow-y: scroll;
+        margin-top: 3vh
     }
 
+    .user-row {
+        width: 100%;
+        height: 5rem;
+    }
+
+    .contact-card {
+        display: flex;
+        align-items: center;
+        height: 5rem;
+    }
+
+    .contact-options {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+    }
+
+    .contact-options div:nth-child(2) {
+        margin: 0 1rem;
+    }
+
+    .chat-row label {
+        display: block;
+        width: 10%;
+        font-size: 2rem;
+        align-self: center;
+    }
+
+    .chat-row {
+        display: flex;
+    }
 }
 
 /*****************************************/
@@ -203,7 +268,6 @@
     .container {
         height: 90%;
         width: 80%;
-        border: 1px solid black;
         margin: auto;
     }
 
@@ -215,7 +279,7 @@
     }
 
     .contacts {
-        height: 100%;
+        height: 51.2rem;
         width: 25%;
         background-color: white;
 
@@ -234,10 +298,13 @@
     .contact-list {
         margin: 0;
         display: block;
+        width: 100%;
+        height: 40.6rem;
+        overflow-y: scroll;
     }
 
     .text-container {
-        height: calc(100% - 18%);
+        height: calc(100% - 17.4%);
     }
 
     /*****************************************/
@@ -245,7 +312,6 @@
 
     .user-row {
         display: flex;
-        height: 4.05rem;
         width: 100%;
     }
 
@@ -253,26 +319,21 @@
         display: block;
     }
 
+    .user-row {
+        height: auto;
+    }
+
     .user-row .img-contact,
     .user-row .user-row-settings {
         width: 50%;
     }
 
-    .img-style {
-        width: 3.25rem;
-    }
-
     .img-contact {
         text-align: left;
-        width: 50%;
     }
 
     .contact-row {
         width: 100%;
-    }
-
-    .contact-info {
-        width: 50%;
     }
 
     .notifications {
@@ -299,14 +360,23 @@
         width: 80%;
     }
 
-    .contact-list {
-        width: 100%;
-        height: 40.3rem;
-        overflow-y: scroll;
-    }
-
     .contact-card {
         margin: 2rem 0;
+    }
+
+    .chat-row label {
+        width: 15%;
+        display: block;
+        text-align: center;
+    }
+
+    .chat-row label i {
+        font-size: 2rem;
+        opacity: 0.5;
+    }
+
+    .chat-row input {
+        width: 70%;
     }
 
 
