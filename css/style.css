@@ -255,6 +255,7 @@
 
     .chat-row {
         display: flex;
+        padding: 0;
     }
 }
 
@@ -287,15 +288,11 @@
     }
 
     .contacts {
-        width: 35%;
+        width: 25rem;
         background-color: white;
         height: 100%;
         flex-direction: column;
-    }
-
-    .chat {
-        height: 100%;
-        width: 65%;
+        flex-shrink: 0;
     }
 
     .notifications,
@@ -402,13 +399,8 @@
     }
 
     .chat-row label {
-        width: 15%;
         display: block;
         text-align: center;
-    }
-
-    .chat-row input {
-        width: 70%;
     }
 
     .contact-info {
