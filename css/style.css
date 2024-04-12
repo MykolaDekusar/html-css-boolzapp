@@ -398,6 +398,13 @@
         margin: 0.5rem 0;
     }
 
+    .contact-card:hover,
+    .notifications:hover,
+    .search:hover {
+        background-color: rgba(0, 0, 0, 0.134);
+        transition-duration: 400ms;
+    }
+
     .chat-row label {
         display: block;
         text-align: center;
