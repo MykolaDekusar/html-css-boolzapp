@@ -286,7 +286,6 @@
     .contacts {
         width: 25rem;
         background-color: white;
-        height: calc(100% -15rem);
         flex-direction: column;
         flex-shrink: 0;
     }
@@ -437,5 +436,7 @@
     /*TEXT CONTAINER*/
     .text-container {
         height: calc(100% - 10rem);
+        padding: 3rem 6rem;
     }
+
 }
